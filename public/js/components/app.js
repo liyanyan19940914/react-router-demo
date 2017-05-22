@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router';
+import Message from '../containers/message';
 
 class App extends Component{
     render(){
         return <div>
             <ul>
                 <li>home</li>
-                <li>message</li>
+                <li><Link to="Message">message</Link></li>
                 <li>personal</li>
             </ul>
         </div>
