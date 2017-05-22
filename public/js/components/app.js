@@ -9,6 +9,7 @@ class App extends Component{
                 <li>home</li>
                 <li><Link to="Message">message</Link></li>
                 <li>personal</li>
+                {this.props.children}
             </ul>
         </div>
     }

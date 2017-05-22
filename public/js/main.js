@@ -15,9 +15,10 @@ const store = createStoreWithMiddleware(reducer);
 render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={App}/>
-            <Route path="/message" component={Message}/>
-            <Redirect from="home" to="message"/>
-            <Route path="/personal" component={Personal}/>
+            <Route path="/" component={App}>
+                <Route path="/message" component={Message}/>
+                <Redirect from="home" to="message"/>
+                <Route path="/personal" component={Personal}/>
+            </Route>
         </Router>
     </Provider>, document.getElementById('app'));
